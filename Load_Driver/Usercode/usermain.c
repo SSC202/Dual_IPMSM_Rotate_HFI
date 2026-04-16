@@ -35,11 +35,21 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     /**********************************
      * @brief   Command update
      */
-    Load1_iq_command.user_command = load1_iq_ref;
-    Command_update(&Load1_iq_command);
+    if (system_enable == 1)
+    {
+        Load1_iq_command.user_command = load1_iq_ref;
+        Command_update(&Load1_iq_command);
 
-    Load2_iq_command.user_command = load2_iq_ref;
-    Command_update(&Load2_iq_command);
+        Load2_iq_command.user_command = load2_iq_ref;
+        Command_update(&Load2_iq_command);
+    }
+    else
+    {
+        load1_iq_ref = 0;
+        load2_iq_ref = 0;
+        Command_init(&Load1_iq_command, 0.1, 0, SYSTEM_SAMPLE_TIME);
+        Command_init(&Load2_iq_command, 0.1, 0, SYSTEM_SAMPLE_TIME);
+    }
 
     /**********************************
      * @brief   Sample Calculate

@@ -13,14 +13,14 @@ void hw_init(void)
     system_enable = 0;
     // Init FOC parameters
     // Load1 motor
-    Command_init(&Load1_iq_command, 0.006, 0, SYSTEM_SAMPLE_TIME);
+    Command_init(&Load1_iq_command, 0.1, 0, SYSTEM_SAMPLE_TIME);
     Load1_curr.adc_val_u_offset = 0;
     Load1_curr.adc_val_v_offset = 0;
     Load1_curr.sample_flag = CURR_SAMPLE_GET_OFFSET; // Read ADC Offset
     PID_init(&Load1_id_pi, 6, 500, 0, 86);           // Current PI Init
     PID_init(&Load1_iq_pi, 6, 500, 0, 86);
     // Load2 motor
-    Command_init(&Load2_iq_command, 0.006, 0, SYSTEM_SAMPLE_TIME);
+    Command_init(&Load2_iq_command, 0.1, 0, SYSTEM_SAMPLE_TIME);
     Load2_curr.sample_flag = CURR_SAMPLE_GET_OFFSET; // Read ADC Offset
     Load2_curr.adc_val_u_offset = 0;
     Load2_curr.adc_val_v_offset = 0;
