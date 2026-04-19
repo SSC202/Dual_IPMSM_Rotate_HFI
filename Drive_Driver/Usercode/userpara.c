@@ -67,3 +67,11 @@ extern ad2s1210_t Drive2_AD2S; // 负载电机2的旋变解码板结构体
 /****************************************
  * @brief   以下为无感算法变量相关定义,用户自行定义相关全局变量
  */
+
+HFI_t Drive1_hfi;                 // 旋转正弦注入结构体
+alpha_beta_t Drive1_i_alpha_beta; // alpha-beta 轴电流
+LPF_t Drive1_ialpha_lpf;          // alpah 轴电流低通滤波器
+LPF_t Drive1_ibeta_lpf;           // beta 轴电流低通滤波器
+
+alpha_beta_t Drive1_u_alpha_betah; // alpha-beta 轴高频指令电压
+abc_t Drive1_u_abch;               // ABC 相高频指令电压

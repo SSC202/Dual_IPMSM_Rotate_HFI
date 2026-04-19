@@ -16,9 +16,9 @@ void hw_init(void)
     Drive1_curr.adc_val_u_offset = 0;
     Drive1_curr.adc_val_v_offset = 0;
     Drive1_curr.sample_flag = CURR_SAMPLE_GET_OFFSET; // Read ADC Offset
-    PID_init(&Drive1_id_pi, 6, 500, 0, 86);           // Current PI Init
-    PID_init(&Drive1_iq_pi, 6, 500, 0, 86);
-    PID_init(&Drive1_speed_pi, 0.075, 0.15, 0, 6.2); // Speed PI Init
+    PID_init(&Drive1_id_pi, 15, 300, 0, 86);           // Current PI Init
+    PID_init(&Drive1_iq_pi, 15, 300, 0, 86);
+    PID_init(&Drive1_speed_pi, 0.01, 0.016, 0, 6.2); // Speed PI Init
     // Drive2 motor
     Drive2_curr.adc_val_u_offset = 0;
     Drive2_curr.adc_val_v_offset = 0;
@@ -38,6 +38,7 @@ void hw_init(void)
     }
     // DAC Init
     HAL_DAC_Start(&hdac1, DAC1_CHANNEL_1);
+    HAL_DAC_Start(&hdac1, DAC1_CHANNEL_2);
     AD5676_init();
     // Open Inverter
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);

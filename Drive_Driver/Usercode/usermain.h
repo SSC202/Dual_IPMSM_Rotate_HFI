@@ -23,6 +23,7 @@
 #include "userpara.h"
 #include "userinit.h"
 #include "drivefoc.h"
+#include "hfi.h"
 
 #include "hwinit.h"
 #include "hwit.h"

@@ -6,17 +6,17 @@ drive_driver/usermain.o: ..\Usercode\usermain.c ..\Usercode\usermain.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio_ex.h \
@@ -45,10 +45,11 @@ drive_driver/usermain.o: ..\Usercode\usermain.c ..\Usercode\usermain.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   ..\Core\Inc\tim.h ..\Core\Inc\main.h ..\Core\Inc\spi.h \
   ..\Core\Inc\adc.h ..\Core\Inc\dac.h ..\Core\Inc\usart.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  C:\USER\ Files\Keil5\install\ files\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\FOC\coordinate_transform.h ..\FOC\foc_math.h ..\FOC\svpwm.h \
   ..\FOC\coordinate_transform.h ..\FOC\curr_sample.h \
   ..\Encoder\ad2s1210.h ..\FOC\foc_math.h ..\Usercode\userpara.h \
-  ..\Hardwarecode\hwdac.h ..\Usercode\user_transfunc.h \
-  ..\Usercode\userinit.h ..\Usercode\drivefoc.h ..\Hardwarecode\hwinit.h \
-  ..\Usercode\userpara.h ..\Hardwarecode\hwit.h
+  ..\Hardwarecode\hwdac.h ..\Usercode\user_transfunc.h ..\HFI\hfi.h \
+  ..\Usercode\user_transfunc.h ..\Usercode\userinit.h \
+  ..\Usercode\drivefoc.h ..\Hardwarecode\hwinit.h ..\Usercode\userpara.h \
+  ..\Hardwarecode\hwit.h

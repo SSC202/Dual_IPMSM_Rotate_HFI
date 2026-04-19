@@ -21,7 +21,7 @@ void usermain(void)
     {
         // DAC Print
         // Usart Print
-        printf("I:%.4f,%.4f\r\n", Load2_iabc.a, Load2_iabc.b);
+        printf("I:%.4f,%.4f\r\n", Load1_iabc.a, Load1_iabc.b);
     }
 }
 

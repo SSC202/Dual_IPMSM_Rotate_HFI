@@ -8,7 +8,7 @@
 #include "hwdac.h"
 #include "user_transfunc.h"
 /** User include **/
-
+#include "hfi.h"
 /** End Include **/
 
 /******************************************************
@@ -83,5 +83,12 @@ extern ad2s1210_t Drive2_AD2S; // 负载电机2的旋变解码板结构体
 /****************************************
  * @brief   以下为无感算法变量相关定义,用户自行定义相关全局变量
  */
+extern HFI_t Drive1_hfi;                 // 旋转正弦注入结构体
+extern alpha_beta_t Drive1_i_alpha_beta; // alpha-beta 轴电流
+extern LPF_t Drive1_ialpha_lpf;          // alpah 轴电流低通滤波器
+extern LPF_t Drive1_ibeta_lpf;           // beta 轴电流低通滤波器
+
+extern alpha_beta_t Drive1_u_alpha_betah; // alpha-beta 轴高频指令电压
+extern abc_t Drive1_u_abch;               // ABC 相高频指令电压
 
 #endif

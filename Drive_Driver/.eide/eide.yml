@@ -3,7 +3,8 @@ name: Drive_Driver
 type: ARM
 deviceName: null
 packDir: null
-srcDirs: []
+srcDirs:
+  - HFI
 virtualFolder:
   name: <virtual_root>
   files: []
@@ -118,6 +119,7 @@ targets:
         - Encoder
         - Usercode
         - FOC
+        - HFI
         - .cmsis/include
         - MDK-ARM/RTE/_Drive_Driver
       libList: []

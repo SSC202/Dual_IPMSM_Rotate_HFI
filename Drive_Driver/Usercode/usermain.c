@@ -21,6 +21,20 @@ void usermain(void)
     {
         // DAC Print
         // Usart Print
+        switch (system_print)
+        {
+        case 0:
+            printf("u: %.3f, %.3f\r\n", Drive1_hfi.theta_obs, Drive1_hfi.theta_true);
+            break;
+        case 1:
+            printf("u: %.3f, %.3f\r\n", Drive1_hfi.speed_obs, Drive1_hfi.speed_true);
+            break;
+        case 2:
+            printf("u: %.3f\r\n", Drive1_hfi.theta_true - Drive1_hfi.theta_obs);
+            break;
+        default:
+            break;
+        }
     }
 }
 
@@ -29,11 +43,15 @@ void usermain(void)
  */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
-    // HAL_GPIO_WritePin(GPIOF, GPIO_PIN_4, 0); // Caculate running time
+    HAL_GPIO_WritePin(GPIOF, GPIO_PIN_4, 0); // Caculate running time
 
     /**********************************
      * @brief   Command update
      */
+    if (system_enable == 0)
+    {
+        Drive1_hfi.enable = 0;
+    }
 
     /**********************************
      * @brief   Sample Calculate
@@ -70,8 +88,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     hw_dac_output();
     HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, system_dac_value1);
     HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, system_dac_value2);
-
-    // HAL_GPIO_WritePin(GPIOF, GPIO_PIN_4, 1); // Caculate running time
+    HAL_GPIO_WritePin(GPIOF, GPIO_PIN_4, 1); // Caculate running time
 }
 
 /**

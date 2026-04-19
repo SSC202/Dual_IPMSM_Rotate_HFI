@@ -43,6 +43,7 @@
 "drive_driver\curr_sample.o"
 "drive_driver\foc_math.o"
 "drive_driver\svpwm.o"
+"drive_driver\hfi.o"
 "drive_driver\hwprint.o"
 "drive_driver\hwit.o"
 "drive_driver\hwinit.o"
